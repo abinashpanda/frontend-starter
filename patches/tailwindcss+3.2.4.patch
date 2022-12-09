@@ -1,0 +1,12 @@
+diff --git a/node_modules/tailwindcss/lib/css/preflight.css b/node_modules/tailwindcss/lib/css/preflight.css
+index 3029044..6e05050 100644
+--- a/node_modules/tailwindcss/lib/css/preflight.css
++++ b/node_modules/tailwindcss/lib/css/preflight.css
+@@ -188,7 +188,6 @@ button,
+ [type='reset'],
+ [type='submit'] {
+   -webkit-appearance: button; /* 1 */
+-  background-color: transparent; /* 2 */
+   background-image: none; /* 2 */
+ }
+ 
