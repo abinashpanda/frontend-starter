@@ -16,4 +16,10 @@ export const ANTD_THEME: ThemeConfig = {
     controlHeight: 36,
     borderRadius: 4,
   },
+  components: {
+    Form: {
+      fontSize: 14,
+      margin: 32,
+    },
+  },
 }

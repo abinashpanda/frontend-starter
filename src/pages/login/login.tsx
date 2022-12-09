@@ -65,7 +65,7 @@ export default function Login() {
           </Form>
         </div>
       </div>
-      <div className="bg-gray-900" />
+      <div className="bg-gradient-to-br from-red-200 via-red-300 to-yellow-200" />
     </div>
   )
 }
