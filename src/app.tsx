@@ -1,12 +1,33 @@
-import { CheckCircleOutlined } from '@ant-design/icons'
-import { Button } from 'antd'
+import { Spin } from 'antd'
+import AuthProtection from 'components/auth-protection'
+import { useAuthContext } from 'hooks/use-auth'
+import Dashboard from 'pages/dashboard'
+import Login from 'pages/login'
+import { Route, Routes } from 'react-router-dom'
 
 export default function App() {
+  const { authVerificationInProgress } = useAuthContext()
+
+  if (authVerificationInProgress) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <Spin tip="Authenticating User" />
+      </div>
+    )
+  }
+
   return (
-    <div className="p-4">
-      <Button type="primary" icon={<CheckCircleOutlined />}>
-        Click Here
-      </Button>
-    </div>
+    <Routes>
+      {/* TODO: Implement lazy loading */}
+      <Route
+        path=""
+        element={
+          <AuthProtection>
+            <Dashboard />
+          </AuthProtection>
+        }
+      />
+      <Route path="login" element={<Login />} />
+    </Routes>
   )
 }
