@@ -89,17 +89,59 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
 ### Scaffolding Page
 
 - `npx hygen page new --name <page-name>` - It would create the page directory (`src/pages/page-name`) with `index.ts` and `page-name.tsx` files.
+
+  ##### Parameters
+
+  | field  | description                                           |
+  | ------ | ----------------------------------------------------- |
+  | `name` | Name of the page. Make sure to use _kebab-case_ name. |
+
 - `npx hygen page sub-component --name <component-name> --parent <page-name>` - It would create the `component-name.tsx` inside `src/pages/page-name/components/` directory.
-- `npx hygen page hook --name <hook-name> --parent <page-name>` - It would create `use-hook-name.tsx` inside `src/pages/page-name/hooks/` directory. **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically.
+
+  ##### Parameters
+
+  | field    | description                                                |
+  | -------- | ---------------------------------------------------------- |
+  | `name`   | Name of the Component.                                     |
+  | `parent` | Name of the page where this sub-component is to be created |
+
+- `npx hygen page hook --name <hook-name> --parent <page-name>` - It would create `use-hook-name.tsx` inside `src/pages/page-name/hooks/` directory.
+
+  ##### Parameters
+
+  | field    | description                                                                                                                                     |
+  | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `name`   | Name of the **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically. |
+  | `parent` | Name of the page where this sub-component is to be created                                                                                      |
 
 ### Scaffolding Components
 
 - `npx hygen component new --name <component-name>` - It would create the component directory (`src/components/component-name`) with `index.ts` and `component-name.tsx` files.
+
+  ##### Parameters
+
+  | field  | description                                           |
+  | ------ | ----------------------------------------------------- |
+  | `name` | Name of the page. Make sure to use _kebab-case_ name. |
+
 - `npx hygen component sub-component --name <component-name> --parent <component-name>` - It would create the `component-name.tsx` inside `src/components/component-name/components/` directory.
+
+  ##### Parameters
+
+  | field    | description                                                     |
+  | -------- | --------------------------------------------------------------- |
+  | `name`   | Name of the Component.                                          |
+  | `parent` | Name of the component where this sub-component is to be created |
 
 ### Scaffolding Hooks
 
 - `npx hygen hook new --name <hook-name>` - It would create `use-hook-name.tsx` inside `src/hooks/` directory. **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically.
+
+  ##### Parameters
+
+  | field  | description                                                                                                                                     |
+  | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `name` | Name of the **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically. |
 
 ## Backend Integration
 
