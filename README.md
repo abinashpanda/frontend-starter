@@ -82,13 +82,13 @@ The codebase is divided into multiple folders
 
 ### Project Scaffolding
 
-This project uses [`hygen`](https://www.hygen.io/) for generating code using templates.
+This project uses [`hygen`](https://www.hygen.io/) for generating code using templates. For each template a prompt would be shown.
 
 **Make sure to provide all the names in kebab-case**.
 
 ### Scaffolding Page
 
-- `npx hygen page new --name <page-name>` - It would create the page directory (`src/pages/page-name`) with `index.ts` and `page-name.tsx` files.
+- `npx hygen page new`
 
   ##### Parameters
 
@@ -96,7 +96,9 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
   | ------ | ----------------------------------------------------- |
   | `name` | Name of the page. Make sure to use _kebab-case_ name. |
 
-- `npx hygen page sub-component --name <component-name> --parent <page-name>` - It would create the `component-name.tsx` inside `src/pages/page-name/components/` directory.
+  It would create the page directory (`src/pages/page-name`) with `index.ts` and `<name>.tsx` files.
+
+- `npx hygen page sub-component`
 
   ##### Parameters
 
@@ -105,7 +107,9 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
   | `name`   | Name of the Component.                                     |
   | `parent` | Name of the page where this sub-component is to be created |
 
-- `npx hygen page hook --name <hook-name> --parent <page-name>` - It would create `use-hook-name.tsx` inside `src/pages/page-name/hooks/` directory.
+  It would create the `<name>.tsx` inside `src/pages/<parent>/components/` directory.
+
+- `npx hygen page hook`
 
   ##### Parameters
 
@@ -114,9 +118,11 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
   | `name`   | Name of the **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically. |
   | `parent` | Name of the page where this sub-component is to be created                                                                                      |
 
+  It would create `use-<name>.tsx` inside `src/pages/<parent>/hooks/` directory.
+
 ### Scaffolding Components
 
-- `npx hygen component new --name <component-name>` - It would create the component directory (`src/components/component-name`) with `index.ts` and `component-name.tsx` files.
+- `npx hygen component new`
 
   ##### Parameters
 
@@ -124,7 +130,9 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
   | ------ | ----------------------------------------------------- |
   | `name` | Name of the page. Make sure to use _kebab-case_ name. |
 
-- `npx hygen component sub-component --name <component-name> --parent <component-name>` - It would create the `component-name.tsx` inside `src/components/component-name/components/` directory.
+  It would create the component directory (`src/components/<name>`) with `index.ts` and `<name>.tsx` files.
+
+- `npx hygen component sub-component`
 
   ##### Parameters
 
@@ -133,15 +141,19 @@ This project uses [`hygen`](https://www.hygen.io/) for generating code using tem
   | `name`   | Name of the Component.                                          |
   | `parent` | Name of the component where this sub-component is to be created |
 
+  It would create the `<name>.tsx` inside `src/components/<parent>/components/` directory.
+
 ### Scaffolding Hooks
 
-- `npx hygen hook new --name <hook-name>` - It would create `use-hook-name.tsx` inside `src/hooks/` directory. **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically.
+- `npx hygen hook new`
 
   ##### Parameters
 
   | field  | description                                                                                                                                     |
   | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
   | `name` | Name of the **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically. |
+
+  It would create `use-<name>.tsx` inside `src/hooks/` directory. **Make sure the hook-name doesn't contain _use_ word**. The hook file and function would be prefixed with _use_ word automatically.
 
 ## Backend Integration
 
